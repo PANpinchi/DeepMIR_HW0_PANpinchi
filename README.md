@@ -13,7 +13,7 @@ Train a model using deep learning techniques, such as a CNN or an attentionbased
 ```bash
 # Clone the repo:
 git clone https://github.com/PANpinchi/DeepMIR_HW0_PANpinchi.git
-
+# Move into the root directory:
 cd DeepMIR_HW0_PANpinchi
 ```
 ## Environment Settings
@@ -46,7 +46,7 @@ Run the commands below to download the Nsynth datasets.
 ```bash
 # Create a datasets folder:
 mkdir datasets
-
+# Move into the datasets folder:
 cd datasets
 ```
 ```bash
@@ -75,6 +75,7 @@ wget http://download.magenta.tensorflow.org/datasets/nsynth/nsynth-test.jsonwav.
 tar -xvzf nsynth-test.jsonwav.tar.gz
 ```
 ```bash
+# Return to the root directory:
 cd ..
 ```
 
