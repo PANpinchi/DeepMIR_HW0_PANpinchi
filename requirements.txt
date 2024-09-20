@@ -1,0 +1,7 @@
+librosa
+matplotlib
+numpy==1.24.4
+pandas
+tqdm
+seaborn
+gdown

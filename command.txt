@@ -1,0 +1,63 @@
+[Download Nsynth Train Valid Test datasets]
+
+gdown --id 1wwNGbMD39_We9vqljmQa_fouK3GGU6Rk
+
+wget http://download.magenta.tensorflow.org/datasets/nsynth/nsynth-valid.jsonwav.tar.gz
+
+wget http://download.magenta.tensorflow.org/datasets/nsynth/nsynth-test.jsonwav.tar.gz
+
+[Download Nsynth Train Valid Test datasets]
+
+unzip nsynth-subtrain.zip
+
+tar -xvzf nsynth-valid.jsonwav.tar.gz
+
+tar -xvzf nsynth-test.jsonwav.tar.gz
+
+
+
+conda create -n deepmir_hw0 python=3.10
+
+conda activate deepmir_hw0
+
+# CUDA 11.3
+conda install pytorch==1.12.0 torchvision==0.13.0 torchaudio==0.12.0 cudatoolkit=11.3 -c pytorch
+
+pip install -r requirements.txt
+
+
+
+【Task1: Visualize a Mel-Spectrogram】
+
+python vis_mel.py
+
+
+
+【Task2: Traditional ML Model】
+
+python dataset_preprocessing.py
+
+python train_ml_model.py --model_type knn
+python train_ml_model.py --model_type rf
+python train_ml_model.py --model_type dt
+python train_ml_model.py --model_type svm
+python train_ml_model.py --model_type lr
+
+python test_ml_model.py --model_type knn
+python test_ml_model.py --model_type rf
+python test_ml_model.py --model_type dt
+python test_ml_model.py --model_type svm
+python test_ml_model.py --model_type lr
+
+
+
+【Task3: Deep Learning Model】
+
+python train_dl_model.py --use_log
+
+python train_dl_model.py
+
+python test_dl_model.py --use_log
+
+python test_dl_model.py
+
