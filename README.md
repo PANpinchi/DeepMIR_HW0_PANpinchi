@@ -50,12 +50,12 @@ mkdir datasets
 cd datasets
 ```
 ```bash
-# Download the subtraining set and unzip it (recommend):
+# Download the sub-training set and unzip it (recommend):
 gdown --id 1wwNGbMD39_We9vqljmQa_fouK3GGU6Rk
 
 unzip nsynth-subtrain.zip
 
-# or you can download the subtraining set and unzip it:
+# or you can download the sub-training set and unzip it:
 wget http://download.magenta.tensorflow.org/datasets/nsynth/nsynth-train.jsonwav.tar.gz
 
 tar -xvzf nsynth-train.jsonwav.tar.gz
@@ -81,7 +81,7 @@ cd ..
 If you cannot download the datasets from the above commands, the
 used training, validation and testing sets can be downloaded from [Nsynth Datasets](https://magenta.tensorflow.org/datasets/nsynth).
 
-Moreover, if you want to use a smaller training set, you can download subtraining set from [here](https://drive.google.com/file/d/1wwNGbMD39_We9vqljmQa_fouK3GGU6Rk/view?usp=sharing).
+Moreover, if you want to use a smaller training set, you can download sub-training set from [here](https://drive.google.com/file/d/1wwNGbMD39_We9vqljmQa_fouK3GGU6Rk/view?usp=sharing).
 
 
 You need to unzip the contents and put them in `/datasets`.
