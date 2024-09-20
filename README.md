@@ -34,9 +34,12 @@ pip install -r requirements.txt
 #### 1. Pre-trained Models
 Run the commands below to download the pre-trained ML and DL model. 
 ```bash
-gdown --folder https://drive.google.com/drive/folders/1Hr5cv686lIvGgdfAWwhhK6vI5uCUrMnb?usp=drive_link
+# The pre-trained ML model. 
+gdown --folder https://drive.google.com/drive/folders/1UhwEUWQbhe9sI9JMvPMEugBRkptyMTf2?usp=drive_link
+# The pre-trained DL model. 
+gdown --folder https://drive.google.com/drive/folders/1GxK53UJACpzZvnzM87DXZlJzeUqk2-5O?usp=drive_link
 ```
-and put the `*.pth` and `*.pkl` files in `/results_ML_model` and `results_DL_model` folders, respectively.
+Note: `*.pth` and `*.pkl` files should be placed in the `/results_ML_model` and `/results_DL_model` folders respectively.
 
 #### 2. Datasets
 Run the commands below to download the Nsynth datasets.
