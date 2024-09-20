@@ -46,6 +46,8 @@ Run the commands below to download the Nsynth datasets.
 ```bash
 # Create a datasets folder:
 mkdir datasets
+
+cd datasets
 ```
 ```bash
 # Download the training set and unzip it:
@@ -68,6 +70,9 @@ tar -xvzf nsynth-valid.jsonwav.tar.gz
 wget http://download.magenta.tensorflow.org/datasets/nsynth/nsynth-test.jsonwav.tar.gz
 
 tar -xvzf nsynth-test.jsonwav.tar.gz
+```
+```bash
+cd ..
 ```
 
 If you cannot download the datasets from the above commands, the
