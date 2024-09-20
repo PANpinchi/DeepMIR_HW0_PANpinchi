@@ -50,22 +50,25 @@ mkdir datasets
 cd datasets
 ```
 ```bash
-# Download the training set and unzip it:
+# Download the subtraining set and unzip it (recommend):
+gdown --id 1wwNGbMD39_We9vqljmQa_fouK3GGU6Rk
+
+unzip nsynth-subtrain.zip
+
+# or you can download the subtraining set and unzip it:
 wget http://download.magenta.tensorflow.org/datasets/nsynth/nsynth-train.jsonwav.tar.gz
 
 tar -xvzf nsynth-train.jsonwav.tar.gz
 
-# or you can download the subtraining set and unzip it:
-gdown --id 1wwNGbMD39_We9vqljmQa_fouK3GGU6Rk
-
-unzip nsynth-subtrain.zip
+# Notice that the paths in our code are written based on the sub-training dataset. Therefore, you may encounter some path-related error messages when using the training data set.
 ```
 ```bash
 # Download the validation set and unzip it:
 wget http://download.magenta.tensorflow.org/datasets/nsynth/nsynth-valid.jsonwav.tar.gz
 
 tar -xvzf nsynth-valid.jsonwav.tar.gz
-
+```
+```bash
 # Download the testing set and unzip it:
 wget http://download.magenta.tensorflow.org/datasets/nsynth/nsynth-test.jsonwav.tar.gz
 
