@@ -120,6 +120,7 @@ ${ROOT}
 ```bash
 python vis_mel.py
 ```
+The visualization results will be stored in the `/results_mel` and `/results_mel_db` folders respectively.
 
 ## 【Task2: Traditional ML Model】
 #### Run the commands below to preprocess the Nsynth datasets.
