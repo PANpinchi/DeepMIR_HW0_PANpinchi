@@ -14,10 +14,9 @@ import joblib
 
 
 def load_preprocessed_data(input_dir):
-    y_train = np.load(os.path.join(input_dir, 'y_subtrain.npy'))
     X_test = np.load(os.path.join(input_dir, 'X_test.npy'))
     y_test = np.load(os.path.join(input_dir, 'y_test.npy'))
-    return y_train, X_test, y_test
+    return X_test, y_test
 
 
 def plot_confusion_matrix(y_true, y_pred, classes,
@@ -77,10 +76,10 @@ def plot_confusion_matrix(y_true, y_pred, classes,
 def main(model_type='knn', plot_cm=False):
     # Dataset and DataLoader initialization
     input_dir = './datasets'
-    y_train, X_test, y_test = load_preprocessed_data(input_dir)
+    X_test, y_test = load_preprocessed_data(input_dir)
 
     # Ensure that we know all possible classes
-    unique_labels = np.unique(np.concatenate([y_train, y_test]))
+    unique_labels = np.arange(11)
 
     # ML Model
     if model_type == 'knn':

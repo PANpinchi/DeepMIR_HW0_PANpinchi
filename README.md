@@ -43,6 +43,7 @@ Note: `*.pth` and `*.pkl` files should be placed in the `/results_ML_model` and 
 
 #### 2. Datasets
 Run the commands below to download the Nsynth datasets.
+If you just want to run the inference code, you can download the testing dataset only.
 ```bash
 # Create a datasets folder:
 mkdir datasets
@@ -123,7 +124,10 @@ python vis_mel.py
 ## 【Task2: Traditional ML Model】
 #### Run the commands below to preprocess the Nsynth datasets.
 ```bash
+# For training and testing datasets
 python dataset_preprocessing.py
+# For testing datasets only
+python dataset_preprocessing.py --test_only
 ```
 
 #### Train the traditional ML model.

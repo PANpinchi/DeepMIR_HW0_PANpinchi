@@ -3,6 +3,7 @@ import json
 import numpy as np
 import librosa
 from tqdm import tqdm
+import argparse
 
 
 def extract_features(audio_path):
@@ -37,6 +38,12 @@ def save_preprocessed_data(json_path, audio_dir, output_dir, name):
 
 
 if __name__ == '__main__':
+    # Parse command-line arguments
+    parser = argparse.ArgumentParser(description='Train ShortChunkCNN model.')
+    parser.add_argument('--test_only', action='store_true', default=False,
+                        help='Whether to preprocess the testing dataset only.')
+    args = parser.parse_args()
+
     subtrain_audio_dir = './datasets/nsynth-subtrain/audio'
     subtrain_json_file = './datasets/nsynth-subtrain/examples.json'
     test_audio_dir = './datasets/nsynth-test/audio'
@@ -46,7 +53,8 @@ if __name__ == '__main__':
 
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
-    
+
     save_preprocessed_data(test_json_file, test_audio_dir, output_dir, name='test')
-    save_preprocessed_data(subtrain_json_file, subtrain_audio_dir, output_dir, name='subtrain')
-    
+    if not args.test_only:
+        save_preprocessed_data(subtrain_json_file, subtrain_audio_dir, output_dir, name='subtrain')
+
